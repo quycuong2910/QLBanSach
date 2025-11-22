@@ -1,4 +1,5 @@
-﻿using QLBanSach.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using QLBanSach.Models;
 using System.Xml.Serialization;
 
 namespace QLBanSach.Data.ChiTietGioHangRepository
@@ -14,5 +15,6 @@ namespace QLBanSach.Data.ChiTietGioHangRepository
         ChiTietGioHang GetById(string id);
         void CapNhatSoLuong(string maChiTiet, int soLuong);
         void Delete(ChiTietGioHang chiTietGioHang);
+        decimal GetPrice(string madongiohang);
     }
 }

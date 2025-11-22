@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using QLBanSach.Data.SachRepository;
 using QLBanSach.Data.TheLoaiRepository;
 using QLBanSach.Models;
+using X.PagedList;
 
 namespace QLBanSach.Controllers
 {
@@ -18,21 +19,22 @@ namespace QLBanSach.Controllers
         }
 
 
-        public IActionResult Index(string? MaTheLoai, string? TenSach)
+        public IActionResult Index(string? MaTheLoai, string? TenSach,int page = 1)
         {
             var sach = _sacRepository.GetAll();
             var theloai = _theLoaiRepository.GetAll();
-            if (MaTheLoai != null)
+            if (!string.IsNullOrEmpty(MaTheLoai))
             {
                 sach = _sacRepository.GetByTl(MaTheLoai);
             }
-            if (TenSach != null)
+            if (!string.IsNullOrEmpty(TenSach))
             {
                 sach = _sacRepository.GetByName(TenSach);
             }
+            int pageSize = 8;
             ViewBag.TheLoai = theloai;
-            ViewBag.Sach = sach;
-            return View();
+            var pagedSach = sach.ToPagedList(page, pageSize);
+            return View(pagedSach);
         }
 
         public IActionResult Privacy()

@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JetBrains.Annotations;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QLBanSach.Data.ChiTietDonHangRepository;
 using QLBanSach.Data.ChiTietGioHangRepository;
 using QLBanSach.Data.DonHangRepository;
 using QLBanSach.Data.GioHangRepository;
+using QLBanSach.Data.NguoiDungRepository;
 using QLBanSach.Data.SachRepository;
 using QLBanSach.Models;
 
@@ -15,15 +18,18 @@ namespace QLBanSach.Controllers
         private readonly IDonHangRepository _donHangRepository;
         private readonly IChiTietDonHangRepository _chiTietDonHangRepository;
         private readonly ISacRepository _sacRepository;
+        private readonly INguoiDungRepository _nguoiDungRepository;
 
-        public DonHangController(IGioHangRepository gioHangRepository, IChiTietGioHangRepository chiTietGioHangRepository, IDonHangRepository donHangRepository, IChiTietDonHangRepository chiTietDonHangRepository, ISacRepository sacRepository)
+        public DonHangController(IGioHangRepository gioHangRepository, IChiTietGioHangRepository chiTietGioHangRepository, IDonHangRepository donHangRepository, IChiTietDonHangRepository chiTietDonHangRepository, ISacRepository sacRepository, INguoiDungRepository guoiDungRepository)
         {
             _gioHangRepository = gioHangRepository;
             _chiTietGioHangRepository = chiTietGioHangRepository;
             _donHangRepository = donHangRepository;
             _chiTietDonHangRepository = chiTietDonHangRepository;
             _sacRepository = sacRepository;
+            _nguoiDungRepository = guoiDungRepository;
         }
+
         private string GenerateMaDonHang()
         {
             var lastOrder = _donHangRepository.GetAll()
@@ -55,23 +61,63 @@ namespace QLBanSach.Controllers
         {
             return View();
         }
+        public string GenerateMaCTDH()
+        {
+            string? lastCode = _chiTietDonHangRepository.GetAll().OrderByDescending(x => x.MaChiTiet)
+                .Select(x => x.MaChiTiet)
+                .FirstOrDefault();
+
+            if (string.IsNullOrEmpty(lastCode))
+            {
+                return "CTDH000001";
+            }
+            int number = int.Parse(lastCode.Substring(4));
+            number++;
+            return "CTDH" + number.ToString("D6");
+        }
+        [HttpGet]
         public IActionResult DatHang(string maGioHang)
         {
-            var DonHang = new DonHang();
-
-            return View();
+            var GioHang = _gioHangRepository.GetById(maGioHang);
+            var NguoiDung = _nguoiDungRepository.GetById(GioHang.MaNguoiDung);
+            var ChiTietGioHang = _chiTietGioHangRepository.GetByIDGioHang(maGioHang); 
+            var DonHang = new DonHang
+            {
+                MaDonHang = GenerateMaDonHang(),
+                MaNguoiDung = NguoiDung.MaNguoiDung,
+                TrangThai = "Đã đặt hàng",
+                NgayDat = DateTime.Now,
+                DiaChiNhanHang = NguoiDung.DiaChi,
+                TongTien = _chiTietGioHangRepository.GetPrice(maGioHang),
+            };
+            ViewBag.MaGioHang = maGioHang;
+            return View(DonHang);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DatHang(DonHang donHang)
+        public IActionResult DatHang(DonHang donHang ,string maGioHang)
         {
-            if (ModelState.IsValid)
-            {
-                //_donHangRepo.Add(donHang);
-                //_donHangRepo.Save();
-                //return RedirectToAction("Index", "Home"); // hoặc trang xác nhận
-            }
-            return View(donHang);
+            _donHangRepository.Add(donHang);
+            _donHangRepository.Save();
+            var ChiTietGioHang = _chiTietGioHangRepository.GetByIDGioHang(maGioHang);
+            foreach (var item in ChiTietGioHang)
+                {
+                    _chiTietDonHangRepository.Add(new ChiTietDonHang
+                    {
+                        MaChiTiet = GenerateMaCTDH(),
+                        MaDonHang = donHang.MaDonHang,
+                        MaSach = item.MaSach,
+                        SoLuong = item.SoLuong,
+                    });
+                    _chiTietDonHangRepository.Save();
+                    _chiTietGioHangRepository.Delete(item);
+                    _chiTietGioHangRepository.Save();
+                }
+                _gioHangRepository.Delete(_gioHangRepository.GetById(maGioHang));
+                _gioHangRepository.Save();
+                TempData["Message"] = "Đã đặt hàng thành công";
+                TempData["MesseType"] = "success";
+                return RedirectToAction("Index", "Home");
         }
     }
 }

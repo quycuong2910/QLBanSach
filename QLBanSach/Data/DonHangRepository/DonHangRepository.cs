@@ -12,17 +12,18 @@ namespace QLBanSach.Data.DonHangRepository
             _context = context;
         }
 
-        public IEnumerable<DonHang> GetAll()=>_context.DonHangs.ToList();
+        public IEnumerable<DonHang> GetAll()=>_context.DonHang.ToList();
 
-        public IEnumerable<DonHang> GetIDNguoiDung(string manguoidung)=>_context.DonHangs
+        public IEnumerable<DonHang> GetIDNguoiDung(string manguoidung)=>_context.DonHang
                            .Where(dh => dh.MaNguoiDung == manguoidung)
                            .ToList();
-        public void Add(DonHang donHang)=>_context.DonHangs.Add(donHang);
+        public void Add(DonHang donHang)=>_context.DonHang.Add(donHang);
 
-        public void Update(DonHang donHang)=>_context.DonHangs.Update(donHang);
+        public void Update(DonHang donHang)=>_context.DonHang.Update(donHang);
 
-        public void Delete(DonHang donHang)=>_context.DonHangs.Remove(donHang);
+        public void Delete(DonHang donHang)=>_context.DonHang.Remove(donHang);
 
         public void Save()=>_context.SaveChanges();
+        
     }
 }

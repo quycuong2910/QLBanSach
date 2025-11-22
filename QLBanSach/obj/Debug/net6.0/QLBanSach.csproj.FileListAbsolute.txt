@@ -518,3 +518,8 @@ C:\Users\Admin\source\repos\QLBanSach\QLBanSach\obj\Debug\net6.0\refint\QLBanSac
 C:\Users\Admin\source\repos\QLBanSach\QLBanSach\obj\Debug\net6.0\QLBanSach.pdb
 C:\Users\Admin\source\repos\QLBanSach\QLBanSach\obj\Debug\net6.0\QLBanSach.genruntimeconfig.cache
 C:\Users\Admin\source\repos\QLBanSach\QLBanSach\obj\Debug\net6.0\ref\QLBanSach.dll
+D:\Projeck\QLBanSach\QLBanSach\obj\Debug\net6.0\QLBanSach.sourcelink.json
+D:\Projeck\QLBanSach\QLBanSach\bin\Debug\net6.0\JetBrains.Annotations.dll
+D:\Projeck\QLBanSach\QLBanSach\bin\Debug\net6.0\X.PagedList.dll
+D:\Projeck\QLBanSach\QLBanSach\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+D:\Projeck\QLBanSach\QLBanSach\obj\Debug\net6.0\QLBanSach.MvcApplicationPartsAssemblyInfo.cs

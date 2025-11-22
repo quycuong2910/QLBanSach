@@ -1,30 +1,34 @@
-﻿@{
+﻿@model X.PagedList.IPagedList<QLBanSach.Models.Sach>
+@using X.PagedList.Mvc.Core
+@{
     ViewData["Title"] = "Home Page";
 }
+
 <link href="~/css/index.css" rel="stylesheet" />
+
 <div class="container-fluid px-4">
     <div class="row">
         <div class="col-2 sidebar">
             <h5>Danh mục</h5>
-
             @foreach (var dm in ViewBag.TheLoai)
             {
-                <a asp-controller="Home" asp-action="Index" asp-route-MaTheLoai="@dm.MaTheLoai" class="me-2">
+                <a asp-controller="Home" 
+                   asp-action="Index" 
+                   asp-route-MaTheLoai="@dm.MaTheLoai" 
+                   class="me-2">
                     @dm.TenTheLoai
                 </a>
             }
         </div>
-
         <div class="col-10">
             <div class="row" id="book-list">
-
-                @if (ViewBag.Sach != null)
+                @if (Model != null && Model.Any())
                 {
-                    foreach (var s in ViewBag.Sach)
+                    foreach (var s in Model)
                     {
                         <div class="col-3 mb-4">
-                            <div class="book-card" onclick="window.location.href='Home/ChiTietSach?MaSach=@s.MaSach'">
-                                <img src="/Images/@s.Anh" alt="/Images/@s.TenSach" />
+                            <div class="book-card" onclick="window.location.href='@Url.Action("ChiTietSach","Home",new { MaSach = s.MaSach })'">
+                                <img src="~/Images/@s.Anh" alt="@s.TenSach" />
                                 <div class="book-title">@s.TenSach</div>
                                 <div class="book-price">@String.Format("{0:N0}", s.Gia) VNĐ</div>
                             </div>
@@ -35,9 +39,63 @@
                 {
                     <p>Không có sách nào để hiển thị.</p>
                 }
-
+            </div>
+            <div class="pagination-container mt-3">
+                @Html.PagedListPager(
+                    Model,
+                    page => Url.Action("Index", new {
+                        page = page,
+                        MaTheLoai = ViewContext.HttpContext.Request.Query["MaTheLoai"],
+                        TenSach = ViewContext.HttpContext.Request.Query["TenSach"]
+                    })
+                )
             </div>
         </div>
     </div>
 </div>
 
+<style>
+.pagination-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.pagination-container a {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 0 6px;
+    background-color: #007bff;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-container a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.pagination-container span {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 0 6px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: default;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+.pagination-container a.disabled {
+    background-color: #b3b3b3 !important;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #eee !important;
+}
+</style>

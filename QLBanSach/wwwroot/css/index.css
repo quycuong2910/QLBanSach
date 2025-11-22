@@ -32,3 +32,7 @@
     font-weight: bold;
     margin-top: auto; /* đẩy giá xuống đáy card */
 }
+.pagination-container {
+    text-align: center;
+    margin-top: 25px;
+}

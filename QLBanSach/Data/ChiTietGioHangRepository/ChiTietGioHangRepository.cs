@@ -1,4 +1,5 @@
-﻿using QLBanSach.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using QLBanSach.Models;
 
 namespace QLBanSach.Data.ChiTietGioHangRepository
 {
@@ -36,5 +37,13 @@ namespace QLBanSach.Data.ChiTietGioHangRepository
         }
 
         public void Delete(ChiTietGioHang chiTietGioHang) => _context.ChiTietGioHang.Remove(chiTietGioHang);
+        public decimal GetPrice(string madongiohang)
+        {
+            var chiTietGioHang = _context.ChiTietGioHang
+            .Include(c => c.Sach)
+            .Where(c => c.MaGioHang == madongiohang)
+            .ToList();
+            return chiTietGioHang.Sum(c => c.Sach.Gia * c.SoLuong);
+        }
     }
 }

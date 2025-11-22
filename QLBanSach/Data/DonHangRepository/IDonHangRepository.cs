@@ -10,5 +10,6 @@ namespace QLBanSach.Data.DonHangRepository
         void Update(DonHang donHang);
         void Delete(DonHang donHang);
         void Save();
+        
     }
 }

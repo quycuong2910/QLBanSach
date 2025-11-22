@@ -1,4 +1,5 @@
-﻿using QLBanSach.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using QLBanSach.Models;
 
 namespace QLBanSach.Data.GioHangRepository
 {
@@ -20,6 +21,7 @@ namespace QLBanSach.Data.GioHangRepository
         public GioHang GetByIDND(string manguoidung) => _context.GioHang.FirstOrDefault(nd => nd.MaNguoiDung == manguoidung);
 
         public IEnumerable<GioHang> GetData() => _context.GioHang.ToList();
+
 
         public void Save() => _context.SaveChanges();
 

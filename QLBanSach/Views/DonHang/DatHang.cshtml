@@ -1,0 +1,57 @@
+﻿@model QLBanSach.Models.DonHang
+
+@{
+    ViewData["Title"] = "Xác nhận đơn hàng";
+}
+
+<h2>Xác nhận đơn hàng</h2>
+
+<div class="card p-4" style="max-width:600px; margin:auto;">
+
+    <!-- FORM CHÍNH — CHỈ CÓ 1 FORM DUY NHẤT -->
+    <form asp-action="DatHang" method="post" class="m-0 p-0">
+        @Html.AntiForgeryToken()
+
+        <!-- Hidden input gửi dữ liệu -->
+        <input type="hidden" name="MaDonHang" value="@Model.MaDonHang" />
+        <input type="hidden" name="MaNguoiDung" value="@Model.MaNguoiDung" />
+        <input type="hidden" name="maGioHang" value="@ViewBag.MaGioHang" />
+
+        <h4>Thông tin người đặt</h4>
+        <p><strong>Mã người dùng:</strong> @Model.MaNguoiDung</p>
+
+        <div class="mb-3">
+            <label for="DiaChiNhanHang" class="form-label"><strong>Địa chỉ nhận hàng:</strong></label>
+            <input type="text" id="DiaChiNhanHang" name="DiaChiNhanHang"
+                   class="form-control"
+                   value="@Model.DiaChiNhanHang" required />
+        </div>
+
+        <h4>Thông tin đơn hàng</h4>
+        <p><strong>Mã đơn hàng:</strong> @Model.MaDonHang</p>
+        <p><strong>Ngày đặt:</strong> @Model.NgayDat.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Trạng thái:</strong> @Model.TrangThai</p>
+        <p><strong>Tổng tiền:</strong> @Model.TongTien.ToString("N0") VNĐ</p>
+        <input type="hidden" name="TrangThai" value="@Model.TrangThai" />
+        <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+
+            <!-- Nút xác nhận -->
+            <button type="submit" class="btn btn-success btn-lg w-100 btn-same-height">
+                Xác nhận đặt hàng
+            </button>
+
+            <!-- Nút hủy -->
+            <a asp-controller="GioHang" asp-action="Index"
+               asp-route-id="@Context.Session.GetString("UserId")"
+               class="btn btn-danger btn-lg w-100 btn-same-height">
+                Hủy
+            </a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .btn-same-height {
+        height: 52px !important;
+    }
+</style>
