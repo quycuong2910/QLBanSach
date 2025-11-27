@@ -30,12 +30,11 @@
               "Title": "DonHangController.cs",
               "DocumentMoniker": "D:\\Projeck\\QLBanSach\\QLBanSach\\Controllers\\DonHangController.cs",
               "RelativeDocumentMoniker": "QLBanSach\\Controllers\\DonHangController.cs",
-              "ToolTip": "D:\\Projeck\\QLBanSach\\QLBanSach\\Controllers\\DonHangController.cs*",
-              "RelativeToolTip": "QLBanSach\\Controllers\\DonHangController.cs*",
+              "ToolTip": "D:\\Projeck\\QLBanSach\\QLBanSach\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "QLBanSach\\Controllers\\DonHangController.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAswGYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T03:03:22.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T03:03:22.847Z"
             },
             {
               "$type": "Document",
@@ -47,8 +46,7 @@
               "RelativeToolTip": "QLBanSach\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAD4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T01:44:42.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T01:44:42.309Z"
             },
             {
               "$type": "Document",
@@ -56,9 +54,9 @@
               "Title": "DatHang.cshtml",
               "DocumentMoniker": "D:\\Projeck\\QLBanSach\\QLBanSach\\Views\\DonHang\\DatHang.cshtml",
               "RelativeDocumentMoniker": "QLBanSach\\Views\\DonHang\\DatHang.cshtml",
-              "ToolTip": "D:\\Projeck\\QLBanSach\\QLBanSach\\Views\\DonHang\\DatHang.cshtml*",
-              "RelativeToolTip": "QLBanSach\\Views\\DonHang\\DatHang.cshtml*",
-              "ViewState": "AgIAABgAAAAAAAAAAAAwwCIAAABJAAAAAAAAAA==",
+              "ToolTip": "D:\\Projeck\\QLBanSach\\QLBanSach\\Views\\DonHang\\DatHang.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\DonHang\\DatHang.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-22T01:24:22.57Z",
               "EditorCaption": ""
