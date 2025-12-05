@@ -1,5 +1,7 @@
 ﻿using JetBrains.Annotations;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using QLBanSach.Data.ChiTietDonHangRepository;
 using QLBanSach.Data.ChiTietGioHangRepository;
@@ -119,8 +121,12 @@ namespace QLBanSach.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DatHang(DonHang donHang ,string maGioHang)
+        public IActionResult DatHang(DonHang donHang ,string maGioHang, bool PhuongThucThanhToan)
         {
+            if(PhuongThucThanhToan)
+            {
+                Console.WriteLine("Z");
+            }
             _donHangRepository.Add(donHang);
             _donHangRepository.Save();
             var ChiTietGioHang = _chiTietGioHangRepository.GetByIDGioHang(maGioHang);

@@ -22,7 +22,9 @@ builder.Services.AddScoped<IChiTietDonHangRepository, ChiTietDonHangRepository>(
 builder.Services.AddSession();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddMemoryCache();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -247,6 +247,38 @@ else
             });
         });
 
+        document.querySelectorAll('.btn-remove').forEach(btn => {
+            btn.addEventListener('click', function () {
+
+                const id = this.dataset.id;
+                if (!confirm("Bạn có chắc muốn xóa sản phẩm này?")) return;
+
+                fetch('@Url.Action("RemoveChiTiet", "GioHang")', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `maChiTiet=${id}&__RequestVerificationToken=${$('input[name="__RequestVerificationToken"]').val()}`
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        // Xóa hàng khỏi bảng
+                        document.querySelector(`tr[data-id="${id}"]`).remove();
+                        updateTongCong();
+                        if (document.querySelectorAll("tbody tr").length === 0) {
+                            document.querySelector(".table-responsive").innerHTML = `
+                                    <div class="alert alert-info text-center">
+            Giỏ hàng hiện đang trống.
+        </div>`;
+                        }
+                    } else {
+                        alert("Xóa thất bại!");
+                    }
+                });
+
+            });
+        });
         updateTongCong();
     </script>
 

@@ -46,6 +46,7 @@ namespace QLBanSach.Controllers
             ViewBag.Error = "Tên đăng nhập hoặc mật khẩu không đúng!";
             return View();
         }
+
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();

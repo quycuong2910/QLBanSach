@@ -513,6 +513,10 @@
       "PackagePath": "staticwebassets\\Images\\python_co_ban.webp"
     },
     {
+      "Id": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\wwwroot\\Images\\qr.png",
+      "PackagePath": "staticwebassets\\Images\\qr.png"
+    },
+    {
       "Id": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\wwwroot\\Images\\quang_ganh_lo_di_va_vui_song.jpg",
       "PackagePath": "staticwebassets\\Images\\quang_ganh_lo_di_va_vui_song.jpg"
     },

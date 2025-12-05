@@ -7,10 +7,9 @@
 <h2 class="text-center mb-4 fw-bold text-primary">Xác nhận đơn hàng</h2>
 
 <div class="card shadow-lg border-0 p-4" style="max-width:700px; margin:auto; border-radius:16px;">
-    <form asp-action="DatHang" method="post">
+    <form asp-action="DatHang" method="post" id="orderForm">
         @Html.AntiForgeryToken()
 
-        <!-- Hidden fields -->
         <input asp-for="MaDonHang" type="hidden" />
         <input asp-for="MaNguoiDung" type="hidden" />
         <input asp-for="TrangThai" type="hidden" />
@@ -18,7 +17,6 @@
         <input asp-for="TongTien" type="hidden" value="@Model.TongTien" />
         <input name="maGioHang" type="hidden" value="@ViewBag.MaGioHang" />
 
-        <!-- Địa chỉ -->
         <div class="mb-4">
             <label asp-for="DiaChiNhanHang" class="form-label fw-semibold text-primary">
                 Địa chỉ nhận hàng
@@ -26,7 +24,30 @@
             <input asp-for="DiaChiNhanHang" class="form-control custom-input" placeholder="Nhập địa chỉ nhận hàng..." />
         </div>
 
-        <!-- Thông tin đơn -->
+        <div class="mb-4">
+            <label class="form-label fw-semibold text-primary">
+                Phương thức thanh toán
+            </label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio"
+                       name="PhuongThucThanhToan"
+                       id="ttTrucTuyen" value="true" checked>
+                <label class="form-check-label" for="ttTrucTuyen">
+                    Thanh toán QR
+                </label>
+            </div>
+
+            <div class="form-check mt-2">
+                <input class="form-check-input" type="radio"
+                       name="PhuongThucThanhToan"
+                       id="ttNhanHang" value="false">
+                <label class="form-check-label" for="ttNhanHang">
+                    Thanh toán khi nhận hàng
+                </label>
+            </div>
+        </div>
+
         <div class="order-box p-3 mb-3 rounded">
             <h5 class="fw-bold text-primary mb-3">Thông tin đơn hàng</h5>
 
@@ -53,9 +74,8 @@
             </div>
         </div>
 
-        <!-- Buttons -->
         <div class="d-flex gap-3 mt-4">
-            <button type="submit" class="btn btn-primary btn-lg flex-fill py-3 fw-bold shadow-sm custom-btn">
+            <button type="button" id="btnSubmitFake" class="btn btn-primary btn-lg flex-fill py-3 fw-bold shadow-sm custom-btn">
                 Xác nhận đặt hàng
             </button>
 
@@ -67,6 +87,40 @@
         </div>
     </form>
 </div>
+
+<!-- Pop-up QR -->
+<div class="modal fade" id="qrModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4 text-center">
+            <h5 class="fw-bold mb-3">Quét mã QR để thanh toán</h5>
+
+            <div id="qrContainer">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Đang tạo mã...</span>
+                </div>
+            </div>
+
+            <div id="paymentInfo" class="mt-3 d-none">
+                <p class="text-muted small mb-1">Mã thanh toán</p>
+                <p class="fw-bold" id="maThanhToan" style="font-size: 18px; letter-spacing: 2px;"></p>
+                <p class="text-primary fw-bold" style="font-size: 20px;">@Model.TongTien.ToString("N0") VNĐ</p>
+                <p class="text-danger small mb-0">
+                    <i class="bi bi-clock"></i> Hết hạn sau <span id="countdown" class="fw-bold">15:00</span>
+                </p>
+            </div>
+
+            <div id="successMessage" class="alert alert-success mt-3 d-none">
+                <h5><strong>✅ Thanh toán thành công!</strong></h5>
+                <p class="mb-0">Đang xử lý đơn hàng...</p>
+            </div>
+
+            <button id="cancelPayment" class="btn btn-outline-danger mt-3 w-100">
+                Hủy thanh toán
+            </button>
+        </div>
+    </div>
+</div>
+
 
 <style>
     .custom-input {
@@ -96,3 +150,169 @@
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
         }
 </style>
+
+<script>
+    let maThanhToanHienTai = null;
+    let intervalKiemTra = null;
+    let intervalCountdown = null;
+    let thoiGianHetHan = null;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("orderForm");
+        const btnSubmitFake = document.getElementById("btnSubmitFake");
+        const cancelPayment = document.getElementById("cancelPayment");
+        const qrModal = new bootstrap.Modal(document.getElementById('qrModal'));
+
+        btnSubmitFake.addEventListener("click", async function (e) {
+            e.preventDefault();
+
+            const diaChiInput = document.querySelector("input[name='DiaChiNhanHang']");
+            if (!diaChiInput.value.trim()) {
+                alert("Vui lòng nhập địa chỉ nhận hàng");
+                return;
+            }
+
+            const selected = document.querySelector("input[name='PhuongThucThanhToan']:checked");
+            if (!selected) {
+                alert("Vui lòng chọn phương thức thanh toán");
+                return;
+            }
+
+            const method = selected.value;
+
+            if (method === "true") {
+                qrModal.show();
+                await taoMaThanhToan();
+            } else {
+                form.submit();
+            }
+        });
+
+        cancelPayment.addEventListener("click", function () {
+            dungKiemTra();
+            qrModal.hide();
+        });
+
+        document.getElementById('qrModal').addEventListener('hidden.bs.modal', function () {
+            dungKiemTra();
+            // Reset modal
+            document.getElementById('qrContainer').innerHTML = '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Đang tạo mã...</span></div>';
+            document.getElementById('paymentInfo').classList.add('d-none');
+            document.getElementById('successMessage').classList.add('d-none');
+            document.getElementById('cancelPayment').classList.remove('d-none');
+        });
+    });
+
+    async function taoMaThanhToan() {
+        try {
+            const response = await fetch('/ThanhToan/TaoMaThanhToan', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    maDonHang: "@Model.MaDonHang",
+                    soTien: @Model.TongTien
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            console.log('Response:', data); // Debug
+
+            if (data.success) {
+                maThanhToanHienTai = data.maThanhToan;
+                thoiGianHetHan = new Date(data.hetHan);
+
+                // Hiển thị QR code
+                const qrUrl = `/ThanhToan/LayQRCode?maThanhToan=${data.maThanhToan}`;
+                console.log('QR URL:', qrUrl); // Debug
+
+                document.getElementById('qrContainer').innerHTML =
+                    `<img src="${qrUrl}"
+                          alt="QR Code"
+                          class="img-fluid"
+                          style="max-width:280px; margin:auto; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                          onerror="console.error('Lỗi load QR image'); this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22280%22><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22>Lỗi tạo QR</text></svg>'">`;
+
+                document.getElementById('maThanhToan').textContent = data.maThanhToan;
+                document.getElementById('paymentInfo').classList.remove('d-none');
+
+                // Bắt đầu kiểm tra thanh toán
+                batDauKiemTra();
+                batDauDemNguoc();
+            } else {
+                throw new Error(data.message || 'Không thể tạo mã thanh toán');
+            }
+        } catch (error) {
+            console.error('Lỗi tạo mã thanh toán:', error);
+            alert('Có lỗi xảy ra: ' + error.message + '. Vui lòng thử lại hoặc kiểm tra Console (F12)');
+            bootstrap.Modal.getInstance(document.getElementById('qrModal')).hide();
+        }
+    }
+
+    function batDauKiemTra() {
+        // Kiểm tra mỗi 2 giây
+        intervalKiemTra = setInterval(async () => {
+            try {
+                const response = await fetch(`/ThanhToan/KiemTraThanhToan?maThanhToan=${maThanhToanHienTai}`);
+                const data = await response.json();
+
+                if (data.success && data.daThanhToan) {
+                    dungKiemTra();
+                    hienThiThanhCong();
+                }
+            } catch (error) {
+                console.error('Lỗi kiểm tra thanh toán:', error);
+            }
+        }, 2000);
+    }
+
+    function batDauDemNguoc() {
+        intervalCountdown = setInterval(() => {
+            const now = new Date();
+            const timeLeft = thoiGianHetHan - now;
+
+            if (timeLeft <= 0) {
+                clearInterval(intervalCountdown);
+                document.getElementById('countdown').textContent = '00:00';
+                dungKiemTra();
+                alert('Mã thanh toán đã hết hạn. Vui lòng thử lại.');
+                bootstrap.Modal.getInstance(document.getElementById('qrModal')).hide();
+                return;
+            }
+
+            const minutes = Math.floor(timeLeft / 60000);
+            const seconds = Math.floor((timeLeft % 60000) / 1000);
+            document.getElementById('countdown').textContent =
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+    }
+
+    function dungKiemTra() {
+        if (intervalKiemTra) {
+            clearInterval(intervalKiemTra);
+            intervalKiemTra = null;
+        }
+        if (intervalCountdown) {
+            clearInterval(intervalCountdown);
+            intervalCountdown = null;
+        }
+    }
+
+    function hienThiThanhCong() {
+        document.getElementById('qrContainer').classList.add('d-none');
+        document.getElementById('paymentInfo').classList.add('d-none');
+        document.getElementById('cancelPayment').classList.add('d-none');
+        document.getElementById('successMessage').classList.remove('d-none');
+
+        // Tự động submit form sau 2 giây
+        setTimeout(() => {
+            document.getElementById("orderForm").submit();
+        }, 2000);
+    }
+</script>

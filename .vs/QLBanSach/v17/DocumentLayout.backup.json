@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\quycu\\Desktop\\QLBanSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\controllers\\nguoidungscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\controllers\\nguoidungscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\shared\\_layoutaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,40 +15,24 @@
       "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\nguoidungs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\nguoidungs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\donhang\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\donhang\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\donhang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\donhang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\account\\emailconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\account\\emailconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\models\\nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\models\\nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\controllers\\donhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\controllers\\donhangscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\models\\pendinguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\models\\pendinguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|c:\\users\\quycu\\desktop\\qlbansach\\qlbansach\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F392539D-F4B4-43BA-95A0-23DC9721D9FD}|QLBanSach\\QLBanSach.csproj|solutionrelative:qlbansach\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +42,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_LayoutAccount.cshtml",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
+              "RelativeDocumentMoniker": "QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAcwGAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T16:12:13.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "QLBanSach\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T16:11:49.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Layout.css",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\wwwroot\\css\\Layout.css",
+              "RelativeDocumentMoniker": "QLBanSach\\wwwroot\\css\\Layout.css",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\wwwroot\\css\\Layout.css",
+              "RelativeToolTip": "QLBanSach\\wwwroot\\css\\Layout.css",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAAEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-05T15:45:56.333Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -74,171 +93,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "QLBanSach\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "QLBanSach\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAMwDUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T07:59:05.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAMwPEAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\DonHang\\Detail.cshtml",
+              "RelativeDocumentMoniker": "QLBanSach\\Views\\DonHang\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\DonHang\\Detail.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\DonHang\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T11:26:47.385Z",
+              "WhenOpened": "2025-12-05T14:28:26.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\NguoiDungs\\Create.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\NguoiDungs\\Create.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\NguoiDungs\\Create.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\NguoiDungs\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "QLBanSach\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAMMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T11:26:43.346Z",
+              "WhenOpened": "2025-12-04T14:09:38.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "QLBanSach\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAswA0BAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T14:09:04.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAMwDkAAAA4AAAAAAAAAA==",
+              "Title": "DatHang.cshtml",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\DonHang\\DatHang.cshtml",
+              "RelativeDocumentMoniker": "QLBanSach\\Views\\DonHang\\DatHang.cshtml",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\DonHang\\DatHang.cshtml",
+              "RelativeToolTip": "QLBanSach\\Views\\DonHang\\DatHang.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAvwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T11:25:59.24Z",
+              "WhenOpened": "2025-12-04T12:17:09.666Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NguoiDungsController.cs",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\NguoiDungsController.cs",
-              "RelativeDocumentMoniker": "QLBanSach\\Controllers\\NguoiDungsController.cs",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\NguoiDungsController.cs",
-              "RelativeToolTip": "QLBanSach\\Controllers\\NguoiDungsController.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "QLBanSach\\Controllers\\DonHangController.cs",
+              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "QLBanSach\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAG0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T11:25:32.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NguoiDung.cs",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Models\\NguoiDung.cs",
-              "RelativeDocumentMoniker": "QLBanSach\\Models\\NguoiDung.cs",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Models\\NguoiDung.cs",
-              "RelativeToolTip": "QLBanSach\\Models\\NguoiDung.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:39:54.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_LayoutAccount.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Shared\\_LayoutAccount.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAMwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T10:36:47.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmailConfirm.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\EmailConfirm.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Account\\EmailConfirm.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\EmailConfirm.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Account\\EmailConfirm.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T10:20:24.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PendingUser.cs",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Models\\PendingUser.cs",
-              "RelativeDocumentMoniker": "QLBanSach\\Models\\PendingUser.cs",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Models\\PendingUser.cs",
-              "RelativeToolTip": "QLBanSach\\Models\\PendingUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T09:58:42.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\Create.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Account\\Create.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\Create.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Account\\Create.cshtml",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAcwKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T09:44:47.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAD0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T07:52:23.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "QLBanSach\\Views\\Account\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeToolTip": "QLBanSach\\Views\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T07:51:14.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DonHangsController.cs",
-              "DocumentMoniker": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\DonHangsController.cs",
-              "RelativeDocumentMoniker": "QLBanSach\\Controllers\\DonHangsController.cs",
-              "ToolTip": "C:\\Users\\quycu\\Desktop\\QLBanSach\\QLBanSach\\Controllers\\DonHangsController.cs",
-              "RelativeToolTip": "QLBanSach\\Controllers\\DonHangsController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T09:29:59.438Z",
+              "WhenOpened": "2025-12-04T12:15:33.224Z",
               "EditorCaption": ""
             }
           ]

@@ -91,6 +91,7 @@ wwwroot\Images\PTBT7.png
 wwwroot\Images\PTBT8.png
 wwwroot\Images\PTBT9.png
 wwwroot\Images\python_co_ban.webp
+wwwroot\Images\qr.png
 wwwroot\Images\quang_ganh_lo_di_va_vui_song.jpg
 wwwroot\Images\sinh_ly_hoc.jpg
 wwwroot\Images\so_cuu_cap_cuu.webp
